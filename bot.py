@@ -2,8 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 import os
 
-TOKEN = "8753224445:AAGQ-Ww00JadUJSpiev1o0mQYRK9KdcOHIM"
-GROUP_ID = -1003632901634
+export  TOKEN = "8753224445:AAGQ-Ww00JadUJSpiev1o0mQYRK9KdcOHIM"
+export  GROUP_ID = -1003632901634
 
 async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
