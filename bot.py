@@ -2,12 +2,13 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 import os
 
-export  TOKEN = "8753224445:AAGQ-Ww00JadUJSpiev1o0mQYRK9KdcOHIM"
-export  GROUP_ID = -1003632901634
+# Получаем токен и ID группы из переменных окружения
+TOKEN = os.environ.get("BOT_TOKEN")
+GROUP_ID = int(os.environ.get("GROUP_ID"))
 
 async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
-    # Игнорируем сообщения из группы
+    # Игнорируем сообщения из группы, чтобы не дублировать
     if update.effective_chat.id == GROUP_ID:
         return
 
@@ -47,7 +48,7 @@ Username: @{user.username if user.username else 'нет'}
 
 
 app = ApplicationBuilder().token(TOKEN).build()
-print("Бот запущен и работает...")  #
+print("Бот запущен и работает...")
 app.add_handler(MessageHandler(filters.ALL, forward))
 
 app.run_polling()
