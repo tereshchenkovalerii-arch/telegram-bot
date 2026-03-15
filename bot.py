@@ -12,9 +12,7 @@ async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     user = update.message.from_user
     header = f"""
-Новое сообщение
 
-Имя: {user.first_name}
 Username: @{user.username if user.username else 'нет'}
 """
     if update.message.text:
