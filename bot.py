@@ -2,8 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 import os
 
-TOKEN = os.environ.get("BOT_TOKEN")
-GROUP_ID = int(os.environ.get("GROUP_ID"))
+TOKEN = "8753224445:AAGQ-Ww00JadUJSpiev1o0mQYRK9KdcOHIM"
+GROUP_ID = -1003632901634
 
 async def forward(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
