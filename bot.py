@@ -47,7 +47,7 @@ Username: @{user.username if user.username else 'нет'}
 
 
 app = ApplicationBuilder().token(TOKEN).build()
-
+print("Бот запущен и работает...")  #
 app.add_handler(MessageHandler(filters.ALL, forward))
 
 app.run_polling()
